@@ -1,3 +1,5 @@
+import com.typesafe.sbt.pgp.PgpKeys.publishSigned
+import sbtrelease.ReleasePlugin.ReleaseKeys.publishArtifactsAction
 import xerial.sbt.Sonatype.SonatypeKeys.profileName
 
 enablePlugins(ScalaJSPlugin)
@@ -5,8 +7,6 @@ enablePlugins(ScalaJSPlugin)
 organization := "com.codemettle.scalajs"
 
 name := "loglevel"
-
-version := "1.0.0-SNAPSHOT"
 
 description := "Scala.js façade for loglevel"
 
@@ -35,6 +35,10 @@ val jsCompileDependencies = Seq(
 jsDependencies := jsCompileDependencies
 
 // Publish / Release
+
+releaseSettings
+
+publishArtifactsAction := publishSigned.value
 
 scmInfo := Some(
     ScmInfo(url("https://github.com/CodeMettle/scalajs-loglevel"),
