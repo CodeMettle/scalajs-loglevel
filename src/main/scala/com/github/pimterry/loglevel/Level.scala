@@ -8,15 +8,17 @@
 package com.github.pimterry.loglevel
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.JSName
+import scala.scalajs.js.annotation.JSGlobal
 
 /**
  * @author steven
  *
  */
+@js.native
 trait Level extends js.Object
 
-@JSName("log.levels")
+@JSGlobal("log.levels")
+@js.native
 object Level extends js.Object {
   def TRACE:  Level = js.native
   def DEBUG:  Level = js.native

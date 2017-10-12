@@ -6,6 +6,8 @@ import scala.scalajs.js
  * @author steven
  *
  */
-object LogLevel extends js.GlobalScope {
+@js.native
+@js.annotation.JSGlobalScope
+object LogLevel extends js.Object {
   val log: Logger = js.native
 }

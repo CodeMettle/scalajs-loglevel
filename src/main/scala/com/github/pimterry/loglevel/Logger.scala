@@ -6,6 +6,7 @@ import scala.scalajs.js
  * @author steven
  *
  */
+@js.native
 trait Logger extends js.Object {
   def trace(msg: Any, addl: Any*): Unit = js.native
   def debug(msg: Any, addl: Any*): Unit = js.native
